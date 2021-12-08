@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Likes</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar flex">
+            <h1>Network</h1>
+        </div>
+        <h1>Your Feed</h1>
+        <div class="main-content flex-top">
+            <div class="column-1">
+                <div class="your-profile">
+                    <img src="./user.png" alt="user picture">
+                    <a href="#">Add an avatar</a>
+                    <h2>James Doe</h2>
+                </div>
+            </div>
+            <div class="column-2">
+                <div class="like-box">
+                    <div class="flex space-between">
+                        <h2>Neil M</h2>
+                        <div class="flex">
+                            <p><span id="likesNumber-1">9</span> like(s)</p>
+                            <button class="like-btn" onclick="addLike(0)">Like</button>
+                        </div>
+                    </div>
+                    <div class="likes-content">
+                        <h3>I just set up this new discord bot, let me know what you all think. <a href="#">link</a></h3>
+                    </div>
+                </div>
+                <div class="like-box">
+                    <div class="flex space-between">
+                        <h2>Nicole K</h2>
+                        <div class="flex">
+                            <p><span id="likesNumber-2">12</span> like(s)</p>
+                            <button class="like-btn" onclick="addLike(1)">Like</button>
+                        </div>
+                    </div>
+                    <div class="likes-content">
+                        <h3>Just finished my <a href="#">next comic</a>, check it out.</h3>
+                    </div>
+                </div>
+                <div class="like-box">
+                    <div class="flex space-between">
+                        <h2>Jim R</h2>
+                        <div class="flex">
+                            <p><span id="likesNumber-3">9</span> like(s)</p>
+                            <button class="like-btn" onclick="addLike(2)">Like</button>
+                        </div>
+                    </div>
+                    <div class="likes-content">
+                        <h3>I can't stop listening to the <a href="#">new album</a>. Who else is liking it?</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

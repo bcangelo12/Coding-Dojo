@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0.5px dotted cyan;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: rgb(46, 45, 45);
+    border: 3px solid gold;
+
+}
+
+h1 {
+    color: cyan;
+}
+h2 {
+    color: lemonchiffon;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+header > div > div {
+    padding: 10px;
+}
+.nav-link {
+    color: lemonchiffon;
+    text-decoration: none;
+}
+
+span {
+    color: cyan;
+    font-size: larger;
+}
+
+ul {
+    background-color: whitesmoke;
+    list-style-type: none;
+    justify-content: space-evenly;
+    border: 2px solid black;
+}
+ul li {
+    padding: 5px 20px;
+}
+
+body {
+    background-color: gray;
+}
+.pop-classes {
+    width: 33%;
+    border: 3px solid gold;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: whitesmoke;
+}
+.class-images {
+    width: 100%;
+}
+.heart {
+    width: 30px;
+    vertical-align: center;
+}
+.addperson {
+    width: 20px;
+    vertical-align: center;
+}
+.bottom-buttons {
+    margin-top: 10px;
+}
+button {
+    background-color: cyan;
+    padding: 5px;
+    font-style: bold;
+    border: 1px solid black;
+    box-shadow: 3px 3px black;
+}
+
+/* tools to apply settings for everything that needs it */
+.flex {
+    display: flex;
+    align-items: center;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.space-between {
+    justify-content: space-between;
+}

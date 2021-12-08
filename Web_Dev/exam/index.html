@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Gaming Dojo</title>
+</head>
+<body>
+    <!-- banner -->
+    <header>
+        <!-- nav bar container -->
+        <div class="container">
+            <!-- nav bar -->
+            <div class="flex space-between">
+                <h1>Gaming<span class="purple-Text">Dojo</span></h1>
+                <ul class="flex">
+                    <li><select name="currency" id="currency">
+                        <option value="euro">Euro &euro;</option>
+                        <option value="dollar">Dollar $</option>
+                        <option value="pound">Pound &pound;</option>
+                    </select></li>
+                    <li class="flex"><img class="nav-imgs" src="./images/cart-light.png" alt="shopping cart"> <a href="#" id="cart-total">0</a></li>
+                    <li><img class="nav-imgs" src="./images/search-light.png" alt="search"></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- main content -->
+    <div class="container">
+        <!-- scrolling window div  -->
+        <div>
+            <h4>Highlights</h4>
+            <div class="space-between flex">
+                <img id="left-arrow" src="./images/chevron-left.png" alt="left arrow" onclick="changeLeft()">
+                <img id="big-preview" src="./images/stonepunk.png" alt="stonepunk">
+                <img id="right-arrow" src="./images/chevron-left.png" alt="right arrow" onclick="changeRight()">
+            </div>
+        </div>
+        <!-- break -->
+        <div class="break">
+            <button class="selectors"></button>
+            <button class="active selectors"></button>
+            <button class="selectors"></button>
+            <button class="selectors"></button>
+        </div>
+        <!-- purchase windows -->
+        <div class="flex space-between">
+            <div class="purchase-windows">
+                <div class="small-preview">
+                    <img class="small-pics" src="./images/cafe-neko.png" alt="cafe neko">
+                </div>
+                <div class="title">
+                    <h3>Cafe Neko: Gold Edition</h3>
+                </div>
+                <div class="platforms">
+                    <img class="platform-icons" src="./images/windows.png" alt="windows">
+                    <img class="platform-icons" src="./images/apple.png" alt="apple">
+                </div>
+                <div class="flex space-between">
+                    <button class="sale-notice">-20%</button>
+                    <h3><span class="orig-price">&euro;14.98</span><br>&euro;10.49</h3>
+                    <button class="buy" onclick="addCart()">Buy</button>
+                </div>
+            </div>
+            <div class="purchase-windows">
+                <div class="small-preview">
+                    <img class="small-pics" src="./images/pixel-ninjas-2.png" alt="pixel ninjas 2">
+                </div>
+                <div class="title">
+                    <h3>Pixel Ninjas 2</h3>
+                </div>
+                <div class="platforms">
+                    <img class="platform-icons" src="./images/windows.png" alt="windows">
+                    <img class="platform-icons" src="./images/apple.png" alt="apple">
+                </div>
+                <div class="flex space-between">
+                    <button class="sale-notice">-10%</button>
+                    <h3><span class="orig-price">&euro;8.19</span><br>&euro;7.39</h3>
+                    <button class="buy" onclick="addCart()">Buy</button>
+                </div>
+            </div>
+            <div class="purchase-windows">
+                <div class="small-preview">
+                    <img class="small-pics" src="./images/stonepunk.png" alt="stonepunk">
+                </div>
+                <div class="title">
+                    <h3>Stonepunk 10000 BCE</h3>
+                </div>
+                <div class="platforms">
+                    <img class="platform-icons" src="./images/windows.png" alt="windows">
+                    <img class="platform-icons" src="./images/apple.png" alt="apple">
+                    <img class="platform-icons" src="./images/linux.png" alt="linux" onclick="alert('This game is supported on Linux')">
+                </div>
+                <div class="flex space-between">
+                    <button class="sale-notice">NEW</button>
+                    <h3>&euro;19.99</h3>
+                    <button class="buy" onclick="addCart()">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

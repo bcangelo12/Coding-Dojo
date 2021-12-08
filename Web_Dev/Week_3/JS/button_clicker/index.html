@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojonary</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="topbar">
+            <h1 class="top_title">Dojonary</h1>
+            <input class="top_search" type="text" placeholder="Search">
+            <button class="top_btn" onclick="switchLogout(this)">Login</button>
+        </div>
+        <div class="content">
+            <div class="column-1">
+                <div class="box-left">
+                    <div class="lookup">
+                        <h1>ninja</h1>
+                        <h3 class="italics">noun</h3>
+                        <h3>Plural: <span class="italics">ninjas</span></h3>
+                        <button class="likes_btn" onclick="alert('Ninja was liked')">13 likes</button>
+                    </div>
+                    <div class="description">
+                        <h3>A practitioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu</a></h3>
+                    </div>
+                </div>
+                <div class="box-left">
+                    <div class="lookup">
+                        <h1>ninja</h1>
+                        <h3 class="italics">noun</h3>
+                        <h3>Plural: <span class="italics">ninjas</span></h3>
+                        <button class="likes_btn" onclick="alert('Ninja was liked')">37 likes</button>
+                    </div>
+                    <div class="description">
+                        <h3>A <a href="#">programmer</a> who breaks down problems with <a href="#">zen</a>-like focus</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="column-2">
+                <div class="box-right">
+                    <h2>Dojonary is defined by <span class="bold">YOU</span></h2>
+                    <button class="add_def" onclick="hide(this)">Add Definition</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

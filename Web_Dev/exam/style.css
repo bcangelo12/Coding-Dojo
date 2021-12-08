@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 0.5px dotted cyan; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(230, 230, 230);
+}
+
+/* header content */
+header {
+    background-color: black;
+}
+h1 {
+    color: white;
+}
+.purple-Text {
+    color: darkorchid;
+}
+.nav-imgs {
+    height: 40px;
+}
+ul {
+    list-style-type: none;
+}
+ul li {
+    padding: 5px 20px;
+}
+#cart-total {
+    color: white;
+    padding-left: 10px;
+}
+
+/* main content */
+/* scrolling window */
+h4 {
+    padding: 10px 0px
+}
+#right-arrow {
+    transform: scaleX(-1);
+}
+
+/* break */
+.break {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.selectors {
+    background-color: darkgrey;
+    width: 50px;
+    height: 10px;
+    margin: 0px 20px;
+    border: none;
+}
+.active {
+    background-color: darkorchid;
+}
+
+/* purchase windows */
+.purchase-windows {
+    background-color: white;
+    flex: 1;
+    margin: 0px 10px;
+}
+.small-pics {
+    height: 100%;
+    width: 100%;
+}
+.title {
+    padding: 10px 0px;
+    padding-left: 10px;
+}
+.platforms {
+    margin-left: 10px;
+}
+.platform-icons {
+    height: 30px;
+    margin-bottom: 30px;
+}
+.sale-notice {
+    height: 50px;
+    width: 75px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: darkorchid;
+    border: none;
+    font-size: 1.2rem;
+    color: white;
+}
+.buy {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: green;
+    box-shadow: 3px 3px black;
+    height: 50px;
+    width: 70px;
+    border: none;
+}
+.orig-price {
+    color: lightgray;
+    text-decoration: line-through;
+    text-decoration-style: solid;
+    font-size: 0.9rem;
+}
+
+/* tools to apply settings for everything that needs it */
+.flex {
+    display: flex;
+    align-items: center;
+}
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
+.space-between {
+    justify-content: space-between;
+}

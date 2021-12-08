@@ -1,0 +1,123 @@
+* {
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: inline-block;
+    width: 800px;
+    height: auto;
+}
+
+.topbar {
+    display: flex;
+    background-color: lightgray;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    margin: 0px 50px 20px 50px;
+    padding: 0px 20px;
+}
+
+.top_search {
+    height: 25px;
+    width: 40%;
+    border: 2px solid black;
+}
+
+.top_btn {
+    background-color: blue;
+    color: white;
+    width: 60px;
+    height: 25px;
+    font-size: 14px;
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 0px 50px;
+}
+
+.column-1 {
+    flex: 70%;
+    /* padding-left: 20px; */
+    /* margin-left: 25px; */
+    justify-content: center;
+    display: flex;
+    /* padding-right: 20px; */
+    flex-direction: column;
+}
+
+.column-2 {
+    flex: 30%;
+    /* padding-right: 20px; */
+    /* margin-right: 25px; */
+    /* padding-left: 20px; */
+    justify-content: center;
+    display: flex;
+}
+
+.box-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid  black;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.box-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid black;
+    height: 50%;
+}
+
+.lookup {
+    flex: 30%;
+    margin-top: 10px;
+}
+
+.description {
+    flex: 70%;
+}
+
+.italics {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+.likes_btn {
+    background-color: yellow;
+    box-shadow: 3px 3px black;
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.add_def {
+    background-color: green;
+    box-shadow: 3px 3px black;
+    border: 2px solid black;
+    margin: 20px;
+    width: 80%;
+    height: 30px;
+    font-weight: bold;
+    font-size: 16px;
+}

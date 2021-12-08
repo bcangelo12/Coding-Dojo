@@ -1,0 +1,32 @@
+div {
+    font-family: sans-serif;
+    margin: 10px 75px;
+}
+
+button#search {
+    border: 2px solid darkcyan;
+    background-color: whitesmoke;
+    color: darkcyan ;
+    border-radius: 15px;
+    padding: 3px 40px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+button#plus {
+    background-color: aquamarine;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 13px;
+    font-size: 30px;
+}
+
+button#account {
+    padding: 7px 30px;
+    background-color: royalblue;
+    color: white;
+    border-color: black;
+    box-shadow: 3px 3px black;
+    font-size: 14px;
+}

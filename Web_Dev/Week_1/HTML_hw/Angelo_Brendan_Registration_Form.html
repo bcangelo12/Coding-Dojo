@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="/process" method="post">
+        <div>
+            <label>First Name: *</label>
+            <input type="text" name="name">
+        </div>
+        <div>
+            <label>Last Name: *</label>
+            <input type="text" name="name">
+        </div>
+        <div>
+            <label>Email Address: *</label>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <label>Password: *</label>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <label>Confirm Password: *</label>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <label>Birthday: </label>
+            <input type="date" name="Birthday">
+        </div>
+        <div>
+            <label>Gender Indentity:</label>
+        </div>
+        <div>
+            <input type="radio" name="Gender" value="normal" id="Male">
+            <label for="Male">Male</label>
+            <input type="radio" name="Gender" value="normal" id="Female">
+            <label for="Female">Female</label>
+            <input type="radio" name="Gender" value="normal" id="Non-binary">
+            <label for="Non-binary">Non-binary</label>
+            <input type="radio" name="Gender" value="normal" id="no_answer">
+            <label for="no_answer">I prefer not to answer</label>
+        </div>
+        <div>
+            <label>A short description about myself:</label>
+        </div>
+        <div>
+            <textarea name="description" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <label>Favorite Language: </label>
+            <select name="language">
+                <option>Javascript</option>
+                <option>HTML</option>
+                <option>Python</option>
+                <option>CSS</option>
+            </select>
+        </div>
+        <div>
+            <input type="checkbox" name="updates" id="updates">
+            <label for="updates">Yes, I would like to receive periodic email updates</label>
+        </div>
+        <div>
+            <input type="submit" value="Create Account">
+        </div>
+        <h5>* Indicates a required field</h5>
+    </form>
+</body>
+</html>

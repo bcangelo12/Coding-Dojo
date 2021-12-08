@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(./Roboto/Roboto-Thin.ttf);
+}
+
+* {
+    font-family: 'Roboto';
+}
+
+.nav {
+    background-color: lightgray;
+    color: white;
+    height: 80px;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav a{
+    color: white;
+    text-decoration: none;
+}
+.nav-title {
+    margin-left: 20px;
+}
+
+
+.nav-links {    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    list-style-type: none;
+}
+
+.btn {
+    background-color: skyblue;
+    color: white;
+    border-width: 2px;
+    border-color: black;
+    box-shadow: 5px 5px  black;
+    height: 35px;
+    width: 100px;
+    font-size: 16px;
+}

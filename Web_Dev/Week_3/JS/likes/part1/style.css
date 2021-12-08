@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 0.5px dotted cyan; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.like-box {
+    width: 40%;
+    margin: 0 auto;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.like-btn {
+    background-color: yellow;
+    box-shadow: 3px 3px black;
+    margin-left: 50px;
+    height: 30px;
+    width: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.likes-content {
+    /* width: inherit; */
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* tools to apply settings for everything that needs it */
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+.space-between {
+    justify-content: space-between;
+}
