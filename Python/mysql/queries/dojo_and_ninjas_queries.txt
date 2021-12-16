@@ -1,0 +1,68 @@
+1. 
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ('dojo1', NOW(), NOW());
+
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ('dojo2', NOW(), NOW());
+
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ('dojo3', NOW(), NOW());
+
+2.
+DELETE FROM dojos WHERE id = 2;
+DELETE FROM dojos WHERE id = 3;
+DELETE FROM dojos WHERE id = 4;
+
+3.
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ('dojo4', NOW(), NOW());
+
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ('dojo5', NOW(), NOW());
+
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ('dojo6', NOW(), NOW());
+
+4.
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ('Bruce', 'Lee', 27, NOW(), NOW(), 5);
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ('Jackie', 'Chan', 67, NOW(), NOW(), 5);
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ('Chuck', 'Noris', 81, NOW(), NOW(), 5);
+
+5.
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ('Ip', 'Man', 60, NOW(), NOW(), 6);
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ('Gichin', 'Funakoshi', 50, NOW(), NOW(), 6);
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ('Tony', 'Jaa', 45, NOW(), NOW(), 6);
+
+6.
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ('Phillip', 'Rhee', 61, NOW(), NOW(), 7);
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ('Jean-Claude', 'Van Damme', 61, NOW(), NOW(), 7);
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ('Wesley', 'Snipes', 59, NOW(), NOW(), 7);
+
+7.
+SELECT * FROM ninjas
+WHERE dojo_id = 5;
+
+8.
+SELECT * FROM ninjas
+WHERE dojo_id = 7;
+
+9.
+SELECT name FROM dojos
+LEFT JOIN ninjas
+ON dojos.id = ninjas.dojo_id
+WHERE first_name = 'Wesley';
