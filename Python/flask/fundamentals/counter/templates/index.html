@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap.css')}}">
+    <title>Counter</title>
+</head>
+<body>
+    <div class="container-sm">
+        <h1 class="text-center">Counter</h1>
+        <h3 class="text-center">{{session['count']}} time(s)</h3>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+            <a href="/plustwo" class="btn btn-primary">+2</a>
+            <a href="/destroy_session" class="btn btn-danger">Reset</a>
+        </div>
+    </div>
+</body>
+</html>

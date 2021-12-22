@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap.css')}}">
+    <title>Dojo Survey User Info</title>
+</head>
+<body>
+    <div class="card mx-auto col-6 bg-info text-dark p-3">
+        <h1 class="card-title text-center"><u>Submitted Info</u></h1>
+        <h3 class="card-text text-center">Name: {{session['username']}}</h3>
+        <h3 class="card-text text-center">Dojo Location: {{session['dojolocation']}}</h3>
+        <h3 class="card-text text-center">Favorite Language: {{session['favlang']}}</h3>
+        <h3 class="card-text text-center">Comment: {{session['usercomment']}}</h3>
+        <a class="btn btn-dark col-2 mx-auto" href="/">Go Back</a>
+    </div>
+</body>
+</html>
