@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap.css')}}">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <form action="/process" method="post" class="bg-info text-dark p-5 col-6 mx-auto">
+        <h1 class="text-center"><u>Dojo Survey</u></h1>
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" name="name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="location">Dojo Location:</label>
+            <select name="location" class="form-control">
+                <option value="">--SELECT ONE--</option>
+                <option value="San Jose">San Jose</option>
+                <option value="Seattle">Seattle</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="Online">Online</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="lang">Favorite Language:</label>
+            <input type="radio" name="lang" id="python" value="Python">
+            <label for="python">Python</label>
+            <input type="radio" name="lang" id="html" value="HTML">
+            <label for="html">HTML</label>
+            <input type="radio" name="lang" id="js" value="Javascript">
+            <label for="js">Javascript</label>
+            <input type="radio" name="lang" id="java" value="Java">
+            <label for="java">Java</label>
+        </div>
+        <div class="form-group">
+            <label for="comment">Comment (optional):</label>
+            <textarea name="comment" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+                <!-- <select name="lang">
+                    <option value="Python">Python</option>
+                    <option value="HTML">HTML</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="Java">Java</option>
+                </select> -->
+        <input type="submit" value="Enter Info" class="btn btn-dark mt-2">
+    </form>
+</body>
+</html>
