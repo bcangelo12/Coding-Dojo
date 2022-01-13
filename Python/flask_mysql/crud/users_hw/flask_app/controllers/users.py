@@ -17,8 +17,8 @@ def new():
 @app.route("/users/create", methods=['POST'])
 def create():
     print(request.form)
-    User.save(request.form)
-    return redirect("/users")
+    new_id = User.save(request.form)
+    return redirect(f"/users/show/{new_id}") #new addition to load single user on creation
 
 @app.route("/users/edit/<int:id>")
 def edit(id):
