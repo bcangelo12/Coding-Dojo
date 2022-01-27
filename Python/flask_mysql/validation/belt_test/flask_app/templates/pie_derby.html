@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap.css')}}">
+    <title>PyPie Derby</title>
+</head>
+<body>
+    <h1 class="mx-2">PyPie Derby</h1>
+    <table class="table table-info mx-2">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>PyPie By</th>
+                <th>Votes</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pie in pies %}
+            <tr>
+                <td><a href="/show/{{ pie.id }}">{{ pie.name }}</a></td>
+                
+                <td></td>
+                
+                <td>0</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/dashboard" class="btn btn-success mx-2">Dashboard</a>
+    <a href="/logout" class="btn btn-danger">Logout</a>
+</body>
+</html>

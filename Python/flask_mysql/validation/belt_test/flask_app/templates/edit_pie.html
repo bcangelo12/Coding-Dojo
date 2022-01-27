@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap.css')}}">
+    <title>PyPie Derby</title>
+</head>
+<body>
+    <div class="col-6">
+        <form action="/pies/update" method="post" class="p-4 bg-dark text-light">
+            <h1>Edit {{ pie.name }}</h1>
+            <input type="hidden" name="id" value="{{ pie.id }}">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name" class="form-control" value="{{ pie.name }}">
+            </div>
+            <div class="form-group">
+                <label for="filling">Filling:</label>
+                <input type="text" name="filling" class="form-control" value="{{ pie.filling }}">
+            </div>
+            <div class="form-group">
+                <label for="crust">Crust:</label>
+                <input type="text" name="crust" class="form-control" value="{{ pie.crust }}">
+            </div>
+            <input type="submit" value="Edit Pie" class="btn btn-success mt-3">
+            {% with messages = get_flashed_messages(category_filter=['pies']) %}
+                {% if messages %}
+                <div class="alert alert-danger mt-2" role="alert">
+                    <strong>ERRORS:</strong>
+                        {% for message in messages %}
+                        <p>{{ message }}</p>
+                        {% endfor %}
+                </div>
+                {% endif %}
+            {% endwith %}
+        </form>
+        <a href="/dashboard" class="btn btn-success mt-2 mx-2">Dashboard</a>
+        <a href="/logout" class="btn btn-danger mt-2">Logout</a>
+    </div>
+</body>
+</html>

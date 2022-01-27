@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap.css')}}">
+    <title>PyPie Derby</title>
+</head>
+<body>
+    <div class="bg-dark col-6 text-center text-light p-4">
+        <h2>{{ pie.name }} By {{ user.first_name }}</h2>
+        <p>{{ pie.filling }} with a {{ pie.crust }}</p>
+        <p>Cast a Vote:</p>
+        <a href="/pies" class="btn btn-primary">Delicious</a>
+    </div>
+    <a href="/dashboard" class="btn btn-success mx-2 mt-2">Dashboard</a>
+    <a href="/logout" class="btn btn-danger mt-2">Logout</a>
+</body>
+</html>
