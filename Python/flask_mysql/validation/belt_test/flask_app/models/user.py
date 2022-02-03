@@ -58,6 +58,7 @@ class User:
                 "name" : row['name'],
                 "filling" : row['filling'],
                 "crust" : row['crust'],
+                "likes" : row['likes'],
                 "created_at" : row['created_at'],
                 "updated_at" : row['updated_at']
             }

@@ -62,3 +62,13 @@ def destroy(id):
     }
     Pie.destroy(data)
     return redirect("/dashboard")
+
+@app.route("/add/one")
+def add_one(id):
+    if "user_id" not in session:
+        return redirect("/logout")
+    data = {
+        "id" : id
+    }
+    Pie.add_like(data)
+    return redirect("/pies")

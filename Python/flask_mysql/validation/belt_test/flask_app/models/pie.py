@@ -10,6 +10,7 @@ class Pie:
         self.name = data['name']
         self.filling = data['filling']
         self.crust = data['crust']
+        self.likes = data['likes']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
         self.user = None
@@ -25,7 +26,7 @@ class Pie:
     
     @classmethod
     def save(cls,data):
-        query = "INSERT INTO pies (name,filling,crust,user_id) VALUES (%(name)s,%(filling)s,%(crust)s,%(user_id)s);"
+        query = "INSERT INTO pies (name,filling,crust,likes,user_id) VALUES (%(name)s,%(filling)s,%(crust)s,0,%(user_id)s);"
         return connectToMySQL(cls.db).query_db(query,data)
     
     @classmethod
@@ -36,7 +37,7 @@ class Pie:
     
     @classmethod
     def update(cls,data):
-        query = "UPDATE pies SET name=%(name)s,filling=%(filling)s,crust=%(crust)s WHERE id=%(id)s;"
+        query = "UPDATE pies SET name=%(name)s,filling=%(filling)s,crust=%(crust)s, WHERE id=%(id)s;"
         return connectToMySQL(cls.db).query_db(query,data)
     
     @classmethod
@@ -44,6 +45,15 @@ class Pie:
         query = "DELETE FROM pies WHERE id=%(id)s;"
         return connectToMySQL(cls.db).query_db(query,data)
     
+    @classmethod
+    def add_like(cls,data):
+        query1 = "SELECT likes FROM pies WHERE id=%(id)s;"
+        results = connectToMySQL(cls.db).query_db(query1,data)
+        current_likes = cls(results[0])
+        plus_one = current_likes + 1
+        query2 =  "UPDATE pies SET likes = " + plus_one + "WHERE id = %(id)s;"
+        return connectToMySQL(cls.db).query_db(query2,data)
+
     @staticmethod
     def validate_pies(pie):
         is_valid = True
