@@ -2,6 +2,7 @@ import re
 from sqlite3 import connect
 from flask_app.config.mysqlconnection import connectToMySQL
 from flask import flash, session
+from flask_app.models import user
 
 class Pie:
     db = "pypie_derby_schema"
@@ -17,11 +18,23 @@ class Pie:
 
     @classmethod
     def get_all(cls):
-        query = "SELECT * FROM pies;"
+        query = "SELECT * FROM pies JOIN users ON pies.user_id = users.id;"
         results = connectToMySQL(cls.db).query_db(query)
         pies = []
         for pie in results:
-            pies.append(cls(pie))
+            pie_class = cls(pie)
+            user_dict = {
+            "id": pie['users.id'],
+            "first_name": pie['first_name'],
+            "last_name": pie['last_name'],
+            "email": pie['email'],
+            "password": pie['password'],
+            "created_at": pie['users.created_at'],
+            "updated_at": pie['users.updated_at']
+            }
+            user_class = user.User(user_dict)
+            pie_class.user = user_class
+            pies.append(pie_class)
         return pies
     
     @classmethod
@@ -31,7 +44,7 @@ class Pie:
     
     @classmethod
     def get_one(cls,data):
-        query = "SELECT * FROM pies WHERE id=%(id)s;"
+        query = "SELECT * FROM pies JOIN users ON pies.user_id = users.id WHERE pies.id=%(id)s;"
         results = connectToMySQL(cls.db).query_db(query,data)
         return cls(results[0])
     
