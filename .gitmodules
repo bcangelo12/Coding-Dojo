@@ -1,0 +1,3 @@
+[submodule "Java/Brendans-Assignments"]
+	path = Java/Brendans-Assignments
+	url = https://github.com/java-feb-2022/Brendans-Assignments.git
