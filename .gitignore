@@ -2,3 +2,15 @@
 /Precamp_Work
 /Programs
 /Screenshots
+Java/TestProject/.project
+.gitignore
+Java/TestProject/.settings/org.eclipse.jdt.core.prefs
+Java/TestProject/.classpath
+Java/TestProject/bin/HelloWorld.class
+Java/TestProject/bin/HelloWorldTest.class
+Java/TestProject/bin/module-info.class
+Java/TestProject/bin/com/codingdojo/projectone/HelloWorld.class
+Java/TestProject/src/HelloWorld.java
+Java/TestProject/src/HelloWorldTest.java
+Java/TestProject/src/module-info.java
+Java/TestProject/src/com/codingdojo/projectone/HelloWorld.java
